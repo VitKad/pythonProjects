@@ -1,11 +1,20 @@
 newNumber = 0
 result = ""
 print("Введите ключ")
-key = int(input())
+
+while True:
+    key = input()  # Ввод числа
+    if (key.isdigit()) : break
+
+#key = int(input())
+key = int(key)
 print("Введите строку")
 text = input()
 print("Введите функцию: 1-кодировать, 2-раскодировать")
-operation= int(input())
+while True:
+    operation = input()  # Ввод числа
+    if ((operation.isdigit()) and ((operation == "1") or (operation == "2") )) : break
+operation= int(operation)
 
 if (ord(text[0])>=1040 and ord(text[0])<=1103):
     while (key>32):
